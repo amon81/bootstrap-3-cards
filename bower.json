@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap-3-cards",
+  "description": "Bootstrap 4 card component, back-ported for Bootstrap 3. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.",
+  "main": [
+    "less/card.less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ],
+  "keywords": [
+    "bootstrap",
+    "card",
+    "less"
+  ],
+  "authors": [
+    "Walter Liguori <amon81@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amon81/bootstrap-3-cards.git"
+  },
+  "dependencies": {
+    "bootstrap-less": ">=3.0.0 <4.0.0"
+  }
+}

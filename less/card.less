@@ -1,0 +1,208 @@
+@panel-body-padding:    24px 16px;
+@panel-heading-padding: 2px;
+@panel-footer-padding:  2px;
+.card-variant(@background, @border) {
+  background-color: @background;
+  border-color: @border;
+
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+  }
+}
+
+.card-outline-variant(@color) {
+  background-color: transparent;
+  border-color: @color;
+}
+
+.card-inverse {
+  .card-header,
+  .card-footer {
+    border-color: rgba(255,255,255,.2);
+  }
+  .card-header,
+  .card-footer,
+  .card-title,
+  .card-blockquote {
+    color: #fff;
+  }
+  .card-link,
+  .card-text,
+  .card-subtitle,
+  .card-blockquote .blockquote-footer {
+    color: rgba(255,255,255,.65);
+  }
+  .card-link {
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  display: block;
+  margin-bottom: @line-height-computed;
+  background-color: @panel-bg;
+  border: 1px solid @panel-default-border;
+  border-radius: @panel-border-radius;
+}
+
+.card-block {
+  .clearfix();
+  padding: @panel-body-padding;
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: @line-height-computed / 2;
+}
+
+.card-subtitle {
+  margin-top: (@line-height-computed / 2) * -1;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  &:hover {
+    text-decoration: none;
+  }
+
+  + .card-link {
+    margin-left: @grid-gutter-width / 2;
+  }
+}
+
+.card {
+  > .list-group:first-child {
+    .list-group-item:first-child {
+      .border-top-radius(@panel-border-radius);
+    }
+  }
+
+  > .list-group:last-child {
+    .list-group-item:last-child {
+      .border-bottom-radius(@panel-border-radius);
+    }
+  }
+}
+
+.card-header {
+  .clearfix();
+  padding: @panel-heading-padding;
+  background-color: @panel-default-heading-bg;
+  border-bottom: 1px solid @panel-default-border;
+
+  &:first-child {
+    border-radius: @panel-border-radius @panel-border-radius 0 0;
+  }
+}
+
+.card-footer {
+  .clearfix();
+  padding: @panel-footer-padding;
+  background-color: @panel-footer-bg;
+  border-top: 1px solid @panel-default-border;
+
+  &:last-child {
+    border-radius: 0 0 @panel-border-radius @panel-border-radius;
+  }
+}
+
+.card-header-tabs {
+  margin-right: -5px;
+  margin-bottom: -10px;
+  margin-left: -5px;
+  border-bottom: 0;
+}
+
+.card-header-pills {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.card-primary {
+  .card-variant(@brand-primary, @brand-primary);
+}
+.card-success {
+  .card-variant(@brand-success, @brand-success);
+}
+.card-info {
+  .card-variant(@brand-info, @brand-info);
+}
+.card-warning {
+  .card-variant(@brand-warning, @brand-warning);
+}
+.card-danger {
+  .card-variant(@brand-danger, @brand-danger);
+}
+
+.card-outline-primary {
+  .card-outline-variant(@btn-primary-bg);
+}
+.card-outline-secondary {
+  .card-outline-variant(@btn-default-border);
+}
+.card-outline-info {
+  .card-outline-variant(@btn-info-bg);
+}
+.card-outline-success {
+  .card-outline-variant(@btn-success-bg);
+}
+.card-outline-warning {
+  .card-outline-variant(@btn-warning-bg);
+}
+.card-outline-danger {
+  .card-outline-variant(@btn-danger-bg);
+}
+
+.card-inverse {
+  .card-inverse();
+}
+
+.card-blockquote {
+  padding: 0;
+  margin-bottom: 0;
+  border-left: 0;
+}
+
+.card-img {
+  border-radius: .25em;
+}
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: @panel-body-padding;
+}
+
+.card-img-top {
+  .border-top-radius(@panel-border-radius);
+}
+.card-img-bottom {
+  .border-bottom-radius(@panel-border-radius);
+}
+.card-deck-wrapper {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+}
+.card-deck {
+    border-spacing: 1.25rem 0;
+    display: table;
+    margin-bottom: 0.75rem;
+    table-layout: fixed;
+    width: 100%;
+}
+.card-deck .card {
+    display: table-cell;
+    margin-bottom: 0;
+    vertical-align: top;
+}
